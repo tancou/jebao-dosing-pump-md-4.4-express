@@ -2,9 +2,9 @@ version: "3"
 
 services:
   app:
+    image: tancou/jebao-dosing-pump-md-4.4-express:${TAG}
     build:
       context: .
-      image: tancou/jebao-dosing-pump-md-4.4-express:${TAG}
     environment:
       - DEVICE_IP=${DEVICE_IP}
     ports:
