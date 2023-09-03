@@ -25,6 +25,13 @@ You can change the port too
 PORT=8000 DEVICE_IP=192.168.0.xx npm start
 ```
 
+### Docker compose
+
+Copy `.env.example` to `.env` and set Device IP.
+```bash
+docker compose up
+```
+
 ## Endpoints
 
 - Server app on http://127.0.0.1:8000
