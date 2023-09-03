@@ -61,5 +61,8 @@ docker compose up
 
 ## Changelog
 
+### 1.0.1 (2023-09-03)
+* (tancou) Release 1.0.1
+
 ### 1.0.0 (2023-09-03)
-* (tancou) Release v1.0.0
+* (tancou) Release 1.0.0
