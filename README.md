@@ -27,9 +27,11 @@ PORT=8000 DEVICE_IP=192.168.0.xx npm start
 
 ### Docker compose
 
-Copy `.env.example` to `.env` and set Device IP.
+Copy `.env.example` to `.env` and set `DEVICE_IP` and `TAG`.
 ```bash
 docker compose up
+# or build it if you want
+docker compose build
 ```
 
 ## Endpoints
