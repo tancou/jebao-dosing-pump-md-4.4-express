@@ -21,7 +21,7 @@ device.on('error', err => {
 
 device.on('data', data => {
     jebaoState = data
-    jebaoStateDate = moment().format('yyyy-mm-dd hh:mm:ss');
+    jebaoStateDate = moment().format();
     console.log('Received new data.')
     // console.log('Data: ' + JSON.stringify(data));
 });
@@ -29,7 +29,6 @@ device.on('data', data => {
 device.on('sent', async data => {
     // console.log('Data: ' + JSON.stringify(data));
     console.log(`Sent emitted`);
-    // await processAction(device, actions.shift());
 });
 
 device.on('disconnected', async data => {
@@ -77,6 +76,7 @@ router
         await device.retrieveData();
         res.json({
             message: "status",
+            date: jebaoStateDate,
             data: jebaoState
         });
     })

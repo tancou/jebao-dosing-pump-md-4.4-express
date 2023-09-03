@@ -1,18 +1,17 @@
+if (process.env.DEVICE_IP === undefined || process.env.DEVICE_IP === null) {
+    console.error('You must define a device IP')
+    console.error('Use DEVICE_IP=192.168.0.x node server.js')
+    process.exit(2)
+}
+
 const express = require("express");
 const router = require('./router');
-const debug = require('debug');
 
 const morgan = require('morgan');
 const bodyParser = require("body-parser");
 const app = express();
 
 const port = process.env.PORT || 8000;
-
-if (process.env.DEVICE_IP === undefined || process.env.DEVICE_IP === null) {
-    console.error('You must define a device IP')
-    console.log('Use DEVICE_IP=192.168.0.x node start')
-    process.exit(1)
-}
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
