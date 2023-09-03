@@ -38,7 +38,7 @@ device.on('disconnected', async data => {
 });
 
 device.on('connected', async () => {
-    console.log(`CONNECT 🚀`);
+    console.log(`CONNECTED to ${deviceIp} 🚀`);
     await device.login();
     deviceConnected = true
     await device.retrieveData();
